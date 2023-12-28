@@ -32,6 +32,11 @@ func (r *queryResolver) Books(ctx context.Context) ([]*model.Book, error) {
 	panic(fmt.Errorf("not implemented: Books - books"))
 }
 
+// Transaction is the resolver for the transaction field.
+func (r *queryResolver) Transaction(ctx context.Context) ([]*model.Transaction, error) {
+	panic(fmt.Errorf("not implemented: Transaction - transaction"))
+}
+
 // Mutation returns MutationResolver implementation.
 func (r *Resolver) Mutation() MutationResolver { return &mutationResolver{r} }
 
