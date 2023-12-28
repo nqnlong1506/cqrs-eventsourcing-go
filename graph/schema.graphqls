@@ -1,0 +1,60 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+enum Status {
+  AVAILABLE
+  BORROWED
+}
+
+enum Genre {
+  ROMANTIC
+  FICTION
+  NONFICTION
+  STORY
+}
+
+type Book {
+  id: ID!
+  title: String!
+  genre: Genre!
+  author: String!
+  status: Status!
+}
+
+type User {
+  id: ID!
+  name: String!
+  borrowedBooks: [Book!]!
+}
+
+type Transaction {
+  id: ID!
+  user: User!
+  book: Book!
+}
+
+type Query {
+  books: [Book!]!
+}
+
+input NewBook {
+  title: String!
+  genre: Genre!
+  author: String!
+}
+
+input NewUser {
+  name: String!
+}
+
+input newBorrow {
+  bookID: ID!
+  userID: ID!
+}
+
+type Mutation {
+  createBook(input: NewBook!): Book!
+  createUser(input: NewUser!): User!
+  borrow(input: newBorrow!): Transaction!
+}
