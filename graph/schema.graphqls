@@ -36,6 +36,7 @@ type Transaction {
 
 type Query {
   books: [Book!]!
+  transaction: [Transaction!]!
 }
 
 input NewBook {
