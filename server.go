@@ -1,18 +1,23 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 	"os"
 
 	"github.com/99designs/gqlgen/graphql/handler"
 	"github.com/99designs/gqlgen/graphql/playground"
-	"github.com/nqnlong1506/cqrs-event-sourcing-go/graph"
+	"github.com/joho/godotenv"
+	"github.com/nqnlong1506/cqrs-event-sourcing-go/pkg/graph"
 )
 
 const defaultPort = "8080"
 
 func main() {
+	envFile, _ := godotenv.Read(".env")
+	fmt.Println(envFile["http_ca_cert"])
+
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = defaultPort

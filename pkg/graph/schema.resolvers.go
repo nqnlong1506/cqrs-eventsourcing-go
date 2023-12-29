@@ -8,13 +8,12 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/nqnlong1506/cqrs-event-sourcing-go/graph/model"
+	"github.com/nqnlong1506/cqrs-event-sourcing-go/pkg/model"
 )
 
 // CreateBook is the resolver for the createBook field.
 func (r *mutationResolver) CreateBook(ctx context.Context, input model.NewBook) (*model.Book, error) {
-	fmt.Println("helloworld")
-	return nil, nil
+	panic(fmt.Errorf("not implemented: CreateBook - createBook"))
 }
 
 // CreateUser is the resolver for the createUser field.

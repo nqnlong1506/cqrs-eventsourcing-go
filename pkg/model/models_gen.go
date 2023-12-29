@@ -8,41 +8,6 @@ import (
 	"strconv"
 )
 
-type Book struct {
-	ID     string `json:"id"`
-	Title  string `json:"title"`
-	Genre  Genre  `json:"genre"`
-	Author string `json:"author"`
-	Status Status `json:"status"`
-}
-
-type NewBook struct {
-	Title  string `json:"title"`
-	Genre  Genre  `json:"genre"`
-	Author string `json:"author"`
-}
-
-type NewUser struct {
-	Name string `json:"name"`
-}
-
-type Transaction struct {
-	ID   string `json:"id"`
-	User *User  `json:"user"`
-	Book *Book  `json:"book"`
-}
-
-type User struct {
-	ID            string  `json:"id"`
-	Name          string  `json:"name"`
-	BorrowedBooks []*Book `json:"borrowedBooks"`
-}
-
-type NewBorrow struct {
-	BookID string `json:"bookID"`
-	UserID string `json:"userID"`
-}
-
 type Genre string
 
 const (

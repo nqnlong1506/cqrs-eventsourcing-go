@@ -14,7 +14,7 @@ import (
 
 	"github.com/99designs/gqlgen/graphql"
 	"github.com/99designs/gqlgen/graphql/introspection"
-	"github.com/nqnlong1506/cqrs-event-sourcing-go/graph/model"
+	"github.com/nqnlong1506/cqrs-event-sourcing-go/pkg/model"
 	gqlparser "github.com/vektah/gqlparser/v2"
 	"github.com/vektah/gqlparser/v2/ast"
 )
@@ -368,7 +368,7 @@ func (ec *executionContext) field_Mutation_borrow_args(ctx context.Context, rawA
 	var arg0 model.NewBorrow
 	if tmp, ok := rawArgs["input"]; ok {
 		ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("input"))
-		arg0, err = ec.unmarshalNnewBorrow2githubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋgraphᚋmodelᚐNewBorrow(ctx, tmp)
+		arg0, err = ec.unmarshalNnewBorrow2githubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋpkgᚋmodelᚐNewBorrow(ctx, tmp)
 		if err != nil {
 			return nil, err
 		}
@@ -383,7 +383,7 @@ func (ec *executionContext) field_Mutation_createBook_args(ctx context.Context, 
 	var arg0 model.NewBook
 	if tmp, ok := rawArgs["input"]; ok {
 		ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("input"))
-		arg0, err = ec.unmarshalNNewBook2githubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋgraphᚋmodelᚐNewBook(ctx, tmp)
+		arg0, err = ec.unmarshalNNewBook2githubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋpkgᚋmodelᚐNewBook(ctx, tmp)
 		if err != nil {
 			return nil, err
 		}
@@ -398,7 +398,7 @@ func (ec *executionContext) field_Mutation_createUser_args(ctx context.Context, 
 	var arg0 model.NewUser
 	if tmp, ok := rawArgs["input"]; ok {
 		ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("input"))
-		arg0, err = ec.unmarshalNNewUser2githubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋgraphᚋmodelᚐNewUser(ctx, tmp)
+		arg0, err = ec.unmarshalNNewUser2githubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋpkgᚋmodelᚐNewUser(ctx, tmp)
 		if err != nil {
 			return nil, err
 		}
@@ -576,7 +576,7 @@ func (ec *executionContext) _Book_genre(ctx context.Context, field graphql.Colle
 	}
 	res := resTmp.(model.Genre)
 	fc.Result = res
-	return ec.marshalNGenre2githubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋgraphᚋmodelᚐGenre(ctx, field.Selections, res)
+	return ec.marshalNGenre2githubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋpkgᚋmodelᚐGenre(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Book_genre(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -664,7 +664,7 @@ func (ec *executionContext) _Book_status(ctx context.Context, field graphql.Coll
 	}
 	res := resTmp.(model.Status)
 	fc.Result = res
-	return ec.marshalNStatus2githubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋgraphᚋmodelᚐStatus(ctx, field.Selections, res)
+	return ec.marshalNStatus2githubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋpkgᚋmodelᚐStatus(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Book_status(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -708,7 +708,7 @@ func (ec *executionContext) _Mutation_createBook(ctx context.Context, field grap
 	}
 	res := resTmp.(*model.Book)
 	fc.Result = res
-	return ec.marshalNBook2ᚖgithubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋgraphᚋmodelᚐBook(ctx, field.Selections, res)
+	return ec.marshalNBook2ᚖgithubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋpkgᚋmodelᚐBook(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Mutation_createBook(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -775,7 +775,7 @@ func (ec *executionContext) _Mutation_createUser(ctx context.Context, field grap
 	}
 	res := resTmp.(*model.User)
 	fc.Result = res
-	return ec.marshalNUser2ᚖgithubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋgraphᚋmodelᚐUser(ctx, field.Selections, res)
+	return ec.marshalNUser2ᚖgithubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋpkgᚋmodelᚐUser(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Mutation_createUser(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -838,7 +838,7 @@ func (ec *executionContext) _Mutation_borrow(ctx context.Context, field graphql.
 	}
 	res := resTmp.(*model.Transaction)
 	fc.Result = res
-	return ec.marshalNTransaction2ᚖgithubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋgraphᚋmodelᚐTransaction(ctx, field.Selections, res)
+	return ec.marshalNTransaction2ᚖgithubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋpkgᚋmodelᚐTransaction(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Mutation_borrow(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -901,7 +901,7 @@ func (ec *executionContext) _Query_books(ctx context.Context, field graphql.Coll
 	}
 	res := resTmp.([]*model.Book)
 	fc.Result = res
-	return ec.marshalNBook2ᚕᚖgithubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋgraphᚋmodelᚐBookᚄ(ctx, field.Selections, res)
+	return ec.marshalNBook2ᚕᚖgithubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋpkgᚋmodelᚐBookᚄ(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Query_books(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -957,7 +957,7 @@ func (ec *executionContext) _Query_transaction(ctx context.Context, field graphq
 	}
 	res := resTmp.([]*model.Transaction)
 	fc.Result = res
-	return ec.marshalNTransaction2ᚕᚖgithubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋgraphᚋmodelᚐTransactionᚄ(ctx, field.Selections, res)
+	return ec.marshalNTransaction2ᚕᚖgithubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋpkgᚋmodelᚐTransactionᚄ(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Query_transaction(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -1182,7 +1182,7 @@ func (ec *executionContext) _Transaction_user(ctx context.Context, field graphql
 	}
 	res := resTmp.(*model.User)
 	fc.Result = res
-	return ec.marshalNUser2ᚖgithubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋgraphᚋmodelᚐUser(ctx, field.Selections, res)
+	return ec.marshalNUser2ᚖgithubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋpkgᚋmodelᚐUser(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Transaction_user(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -1234,7 +1234,7 @@ func (ec *executionContext) _Transaction_book(ctx context.Context, field graphql
 	}
 	res := resTmp.(*model.Book)
 	fc.Result = res
-	return ec.marshalNBook2ᚖgithubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋgraphᚋmodelᚐBook(ctx, field.Selections, res)
+	return ec.marshalNBook2ᚖgithubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋpkgᚋmodelᚐBook(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Transaction_book(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -1378,7 +1378,7 @@ func (ec *executionContext) _User_borrowedBooks(ctx context.Context, field graph
 	}
 	res := resTmp.([]*model.Book)
 	fc.Result = res
-	return ec.marshalNBook2ᚕᚖgithubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋgraphᚋmodelᚐBookᚄ(ctx, field.Selections, res)
+	return ec.marshalNBook2ᚕᚖgithubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋpkgᚋmodelᚐBookᚄ(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_User_borrowedBooks(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -3202,7 +3202,7 @@ func (ec *executionContext) unmarshalInputNewBook(ctx context.Context, obj inter
 			it.Title = data
 		case "genre":
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("genre"))
-			data, err := ec.unmarshalNGenre2githubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋgraphᚋmodelᚐGenre(ctx, v)
+			data, err := ec.unmarshalNGenre2githubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋpkgᚋmodelᚐGenre(ctx, v)
 			if err != nil {
 				return it, err
 			}
@@ -3929,11 +3929,11 @@ func (ec *executionContext) ___Type(ctx context.Context, sel ast.SelectionSet, o
 
 // region    ***************************** type.gotpl *****************************
 
-func (ec *executionContext) marshalNBook2githubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋgraphᚋmodelᚐBook(ctx context.Context, sel ast.SelectionSet, v model.Book) graphql.Marshaler {
+func (ec *executionContext) marshalNBook2githubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋpkgᚋmodelᚐBook(ctx context.Context, sel ast.SelectionSet, v model.Book) graphql.Marshaler {
 	return ec._Book(ctx, sel, &v)
 }
 
-func (ec *executionContext) marshalNBook2ᚕᚖgithubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋgraphᚋmodelᚐBookᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.Book) graphql.Marshaler {
+func (ec *executionContext) marshalNBook2ᚕᚖgithubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋpkgᚋmodelᚐBookᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.Book) graphql.Marshaler {
 	ret := make(graphql.Array, len(v))
 	var wg sync.WaitGroup
 	isLen1 := len(v) == 1
@@ -3957,7 +3957,7 @@ func (ec *executionContext) marshalNBook2ᚕᚖgithubᚗcomᚋnqnlong1506ᚋcqrs
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalNBook2ᚖgithubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋgraphᚋmodelᚐBook(ctx, sel, v[i])
+			ret[i] = ec.marshalNBook2ᚖgithubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋpkgᚋmodelᚐBook(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -3977,7 +3977,7 @@ func (ec *executionContext) marshalNBook2ᚕᚖgithubᚗcomᚋnqnlong1506ᚋcqrs
 	return ret
 }
 
-func (ec *executionContext) marshalNBook2ᚖgithubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋgraphᚋmodelᚐBook(ctx context.Context, sel ast.SelectionSet, v *model.Book) graphql.Marshaler {
+func (ec *executionContext) marshalNBook2ᚖgithubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋpkgᚋmodelᚐBook(ctx context.Context, sel ast.SelectionSet, v *model.Book) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "the requested element is null which the schema does not allow")
@@ -4002,13 +4002,13 @@ func (ec *executionContext) marshalNBoolean2bool(ctx context.Context, sel ast.Se
 	return res
 }
 
-func (ec *executionContext) unmarshalNGenre2githubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋgraphᚋmodelᚐGenre(ctx context.Context, v interface{}) (model.Genre, error) {
+func (ec *executionContext) unmarshalNGenre2githubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋpkgᚋmodelᚐGenre(ctx context.Context, v interface{}) (model.Genre, error) {
 	var res model.Genre
 	err := res.UnmarshalGQL(v)
 	return res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) marshalNGenre2githubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋgraphᚋmodelᚐGenre(ctx context.Context, sel ast.SelectionSet, v model.Genre) graphql.Marshaler {
+func (ec *executionContext) marshalNGenre2githubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋpkgᚋmodelᚐGenre(ctx context.Context, sel ast.SelectionSet, v model.Genre) graphql.Marshaler {
 	return v
 }
 
@@ -4027,23 +4027,23 @@ func (ec *executionContext) marshalNID2string(ctx context.Context, sel ast.Selec
 	return res
 }
 
-func (ec *executionContext) unmarshalNNewBook2githubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋgraphᚋmodelᚐNewBook(ctx context.Context, v interface{}) (model.NewBook, error) {
+func (ec *executionContext) unmarshalNNewBook2githubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋpkgᚋmodelᚐNewBook(ctx context.Context, v interface{}) (model.NewBook, error) {
 	res, err := ec.unmarshalInputNewBook(ctx, v)
 	return res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) unmarshalNNewUser2githubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋgraphᚋmodelᚐNewUser(ctx context.Context, v interface{}) (model.NewUser, error) {
+func (ec *executionContext) unmarshalNNewUser2githubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋpkgᚋmodelᚐNewUser(ctx context.Context, v interface{}) (model.NewUser, error) {
 	res, err := ec.unmarshalInputNewUser(ctx, v)
 	return res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) unmarshalNStatus2githubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋgraphᚋmodelᚐStatus(ctx context.Context, v interface{}) (model.Status, error) {
+func (ec *executionContext) unmarshalNStatus2githubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋpkgᚋmodelᚐStatus(ctx context.Context, v interface{}) (model.Status, error) {
 	var res model.Status
 	err := res.UnmarshalGQL(v)
 	return res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) marshalNStatus2githubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋgraphᚋmodelᚐStatus(ctx context.Context, sel ast.SelectionSet, v model.Status) graphql.Marshaler {
+func (ec *executionContext) marshalNStatus2githubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋpkgᚋmodelᚐStatus(ctx context.Context, sel ast.SelectionSet, v model.Status) graphql.Marshaler {
 	return v
 }
 
@@ -4062,11 +4062,11 @@ func (ec *executionContext) marshalNString2string(ctx context.Context, sel ast.S
 	return res
 }
 
-func (ec *executionContext) marshalNTransaction2githubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋgraphᚋmodelᚐTransaction(ctx context.Context, sel ast.SelectionSet, v model.Transaction) graphql.Marshaler {
+func (ec *executionContext) marshalNTransaction2githubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋpkgᚋmodelᚐTransaction(ctx context.Context, sel ast.SelectionSet, v model.Transaction) graphql.Marshaler {
 	return ec._Transaction(ctx, sel, &v)
 }
 
-func (ec *executionContext) marshalNTransaction2ᚕᚖgithubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋgraphᚋmodelᚐTransactionᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.Transaction) graphql.Marshaler {
+func (ec *executionContext) marshalNTransaction2ᚕᚖgithubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋpkgᚋmodelᚐTransactionᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.Transaction) graphql.Marshaler {
 	ret := make(graphql.Array, len(v))
 	var wg sync.WaitGroup
 	isLen1 := len(v) == 1
@@ -4090,7 +4090,7 @@ func (ec *executionContext) marshalNTransaction2ᚕᚖgithubᚗcomᚋnqnlong1506
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalNTransaction2ᚖgithubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋgraphᚋmodelᚐTransaction(ctx, sel, v[i])
+			ret[i] = ec.marshalNTransaction2ᚖgithubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋpkgᚋmodelᚐTransaction(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -4110,7 +4110,7 @@ func (ec *executionContext) marshalNTransaction2ᚕᚖgithubᚗcomᚋnqnlong1506
 	return ret
 }
 
-func (ec *executionContext) marshalNTransaction2ᚖgithubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋgraphᚋmodelᚐTransaction(ctx context.Context, sel ast.SelectionSet, v *model.Transaction) graphql.Marshaler {
+func (ec *executionContext) marshalNTransaction2ᚖgithubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋpkgᚋmodelᚐTransaction(ctx context.Context, sel ast.SelectionSet, v *model.Transaction) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "the requested element is null which the schema does not allow")
@@ -4120,11 +4120,11 @@ func (ec *executionContext) marshalNTransaction2ᚖgithubᚗcomᚋnqnlong1506ᚋ
 	return ec._Transaction(ctx, sel, v)
 }
 
-func (ec *executionContext) marshalNUser2githubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋgraphᚋmodelᚐUser(ctx context.Context, sel ast.SelectionSet, v model.User) graphql.Marshaler {
+func (ec *executionContext) marshalNUser2githubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋpkgᚋmodelᚐUser(ctx context.Context, sel ast.SelectionSet, v model.User) graphql.Marshaler {
 	return ec._User(ctx, sel, &v)
 }
 
-func (ec *executionContext) marshalNUser2ᚖgithubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋgraphᚋmodelᚐUser(ctx context.Context, sel ast.SelectionSet, v *model.User) graphql.Marshaler {
+func (ec *executionContext) marshalNUser2ᚖgithubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋpkgᚋmodelᚐUser(ctx context.Context, sel ast.SelectionSet, v *model.User) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "the requested element is null which the schema does not allow")
@@ -4387,7 +4387,7 @@ func (ec *executionContext) marshalN__TypeKind2string(ctx context.Context, sel a
 	return res
 }
 
-func (ec *executionContext) unmarshalNnewBorrow2githubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋgraphᚋmodelᚐNewBorrow(ctx context.Context, v interface{}) (model.NewBorrow, error) {
+func (ec *executionContext) unmarshalNnewBorrow2githubᚗcomᚋnqnlong1506ᚋcqrsᚑeventᚑsourcingᚑgoᚋpkgᚋmodelᚐNewBorrow(ctx context.Context, v interface{}) (model.NewBorrow, error) {
 	res, err := ec.unmarshalInputnewBorrow(ctx, v)
 	return res, graphql.ErrorOnPath(ctx, err)
 }
