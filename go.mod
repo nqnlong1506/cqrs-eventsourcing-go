@@ -4,10 +4,13 @@ go 1.21.4
 
 require (
 	github.com/99designs/gqlgen v0.17.41
+	github.com/elastic/go-elasticsearch/v8 v8.11.1
+	github.com/joho/godotenv v1.5.1
 	github.com/vektah/gqlparser/v2 v2.5.10
 )
 
 require (
+	github.com/elastic/elastic-transport-go/v8 v8.3.0 // indirect
 	github.com/golang/snappy v0.0.1 // indirect
 	github.com/klauspost/compress v1.13.6 // indirect
 	github.com/montanaflynn/stats v0.0.0-20171201202039-1bf9dbcd8cbe // indirect
